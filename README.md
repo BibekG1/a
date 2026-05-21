@@ -14,7 +14,7 @@ This document and the associated script are provided **strictly for educational,
 
 
 
-## 🖥️ Supported Operating Systems & Build Requirements
+## 🖥️ Supported Operating Systems & Build Requirements 🟡🟡 FOR ACTIVATOR 1 🟡🟡
 
 | Feature                 | Supported OS                              | Minimum Build | Notes                                  |
 |-------------------------|-------------------------------------------|---------------|----------------------------------------|
@@ -25,14 +25,28 @@ This document and the associated script are provided **strictly for educational,
 | **Scheduled Renewal**   | Windows Vista / 7 / 8 / 10 / 11           | 6000+         | Uses Windows Task Scheduler.           |
 
 > 🔰 **Safety:** Unsupported builds will exit gracefully with a version-check warning.
-ㅤ
-
 ---
 ㅤ
 ㅤ
 ㅤ
 ㅤㅤ
+---ㅤ
+## 🌐 Supported Operating Systems & Build Requirements 🟢🟢 FOR ACTIVATOR 2 🟢🟢
 
+| Component          | Supported OS / Version                          | Minimum Build | Notes                                  |
+|--------------------|-------------------------------------------------|---------------|----------------------------------------|
+| **Windows Client** | 7, 8, 8.1, 10, 11                               | 7600+         | HWID requires Win10+ & internet        |
+| **Windows Server** | 2008 R2 – 2025                                  | 7600+         | KMS/TSforge/Ohook fully supported      |
+| **Architecture**   | x86, x64, ARM64                                 | Native        | Auto-redirects via `Sysnative`/`SysArm32` |
+| **Office Suites**  | 2010, 2013, 2016, 2019, 2021, 2024, LTSC, 365   | Varies        | Handles C2R/Retail → Volume conversion |
+| **PowerShell**     | 2.0 – 5.1+                                      | Built-in      | Required for JIT compilation & API calls |
+
+> 🔰 **Safety:** Unsupported builds will exit gracefully with a version-check warning.
+---
+ㅤ
+ㅤ
+ㅤ
+ㅤㅤ
 ---
 
 ## ⚡ One-Click Install (Recommended)
@@ -93,7 +107,9 @@ $u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('
 | `[B]`  | **KMS38 Activation** – Applies built-in KMS GVLK + local activation (2038 expiry).                                          | 
 | `[C]`  | **Online KMS** – Connects to KMS servers for Windows/Office. Includes auto-renewal task creation.                           | 
 | `[D]`  | **Check Activation Status** – Queries `slmgr.vbs -xpr`, WMIC SPP classes, and license states.                               | 
-| `[E]`  | **Extras** – `$OEM$` folder generation, key injection, retail-to-volume conversion, task management, and script extraction. |
+| `[E]`  | **Troubleshoot | DISM repair, SPP cache clear, network tests, log export, edition change diagnostics. |
+| `[F]`  | **Extras** | `$OEM$` media prep, edition downgrade/upgrade, key injection, context menus, task management, and script extraction. |
+| `[G]`  | **Uninstall** | Complete removal of MAS hooks, tasks, registry entries, and KMS cache.     |
 
 
 ---
@@ -126,11 +142,52 @@ $u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('
 
 
 
+---
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+
+
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+---
 
 
 
->
-> 📌 **Note:** Unsupported builds will exit gracefully with a version-check warning.
-> 
+### ⚠️ DISCLAIMER & LEGAL NOTICE
+
+This project is provided **"AS-IS"** strictly for educational, research, and system administration purposes. By using this script, you explicitly acknowledge and agree to the following:
+
+- **NO LIABILITY:** The authors, contributors, and maintainers assume **ZERO** responsibility or liability for any system instability, data loss, activation failures, legal consequences, or damages arising from the use or misuse of this tool.
+- **USER RESPONSIBILITY:** You assume **FULL** and **SOLE** responsibility for how, where, and under what circumstances this script is executed. Use entirely at your own risk.
+- **LEGAL COMPLIANCE:** Do **NOT** use this tool for illicit, unauthorized, or illegal purposes. Always comply with applicable software licensing agreements, local laws, and organizational policies.
+- **NO AFFILIATION:** This project is **NOT** affiliated with, endorsed by, or authorized by Microsoft Corporation. All trademarks and product names are the property of their respective owners.
+
+If you do not agree with these terms, do not download, run, or distribute this software.
 ㅤ
 ㅤ
