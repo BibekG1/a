@@ -53,3 +53,19 @@ This document and the associated script are provided **strictly for educational,
 
 ---
 
+
+
+
+### 📊 Functional Comparison (Same Goal, Different Path)
+| Feature | `Activator 1` | `Activator 2` |
+|---------|-----------------|---------------|
+| HWID Activation | ✅ Embedded token/hashing logic | ✅ Direct SPP hash sync via PowerShell |
+| KMS38 / KMS4k | ✅ Pre-baked GVLK + DLL hooks | ✅ Native CSVLK injection + API calls |
+| Office Activation | ✅ Retail→Volume converter + embedded licenses | ✅ OSPP/C2R detection + dynamic GVLK mapping |
+| Scheduled Renewal | ✅ XML task templates embedded | ✅ Compact XML generation + PowerShell task creation |
+| AV Evasion | ✅ Relies on obfuscation + DLL packing | ✅ Uses native OS calls + JIT compilation (lower signature footprint) |
+| **Payload Strategy** | Stores pre-compiled binaries (DLLs, tokens, license files, large key databases) as encoded text blobs directly inside the script. Acts like a self-extracting archive. | Contains **no embedded binaries**. Uses PowerShell/C# Just-In-Time (JIT) compilation to generate activation logic on the fly. |
+| **Execution Model** | Extracts heavy payloads to `%TEMP%`, runs them, then cleans up. | Orchestrates native Windows APIs (`SPP`, `SLMGR`, `WMI`, `Task Scheduler`) via inline PowerShell and C# namespaces (`LibTSforge`, `ActivationWs`). |
+| **Data Storage** | Bulk Base64/Custom-encoded blocks (`:bat2file`, `::R2Vfile`, etc.) that decode into full files. | Compact arrays, GUID maps, and conditional logic. Data is parsed dynamically rather than stored as full file dumps. |
+| **Dependency Footprint** | Self-contained. Ships everything it needs → larger size, higher AV signature surface. | OS-native. Relies on Windows built-in components → minimal script size, lower detection footprint. |
+
