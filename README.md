@@ -16,32 +16,33 @@ This document and the associated script are provided **strictly for educational,
 
 ## 🖥️ Supported Operating Systems & Build Requirements 🟡🟡 FOR ACTIVATOR 1 🟡🟡
 
-| Feature                 | Supported OS                              | Minimum Build | Notes                                  |
-|-------------------------|-------------------------------------------|---------------|----------------------------------------|
-| **HWID Activation**     | Windows 10 / 11 (Client & Server)         | 10240+        | Requires one-time internet contact.    | 
-| **KMS38 Activation**    | Windows 10 / Server 2016+                 | 14393+        | Offline-capable. Valid until Jan 2038. |
-| **Online KMS**          | Windows 7 / 8 / 8.1 / 10 / 11 & Servers   | 7600+         | Requires internet for KMS handshake.   |
-| **Office Activation**   | Office 2010, 2013, 2016, 2019, 2021, 365  | Varies        | Handles Retail ↔ Volume conversion.    |
-| **Scheduled Renewal**   | Windows Vista / 7 / 8 / 10 / 11           | 6000+         | Uses Windows Task Scheduler.           |
+| Feature / Component       | Supported OS / Versions                     | Minimum Build | Notes & Requirements                     |
+|---------------------------|---------------------------------------------|---------------|------------------------------------------|
+| **HWID Activation**       | Windows 10 / 11 (Client & Server)           | 10240+        | Requires one-time internet contact.      |
+| **KMS38 Activation**      | Windows 10 / Server 2016+                   | 14393+        | Offline-capable. Valid until Jan 2038.   |
+| **Online KMS**            | Windows 7 / 8 / 8.1 / 10 / 11 & Servers     | 7600+         | Requires internet for KMS handshake.     |
+| **Office Activation**     | Office 2010, 2013, 2016, 2019, 2021, 365    | Varies        | Handles Retail ↔ Volume conversion.      |
+| **Scheduled Renewal**     | Windows Vista / 7 / 8 / 10 / 11             | 6000+         | Uses Windows Task Scheduler.             |
+| **Architecture & Runtime**| x86, x64                                    | Native        | Standard Batch/WSF execution flow.       |
 
 > 🔰 **Safety:** Unsupported builds will exit gracefully with a version-check warning.
+
 ---
-ㅤ
-ㅤ
-ㅤ
-ㅤㅤ
----ㅤ
+
 ## 🌐 Supported Operating Systems & Build Requirements 🟢🟢 FOR ACTIVATOR 2 🟢🟢
 
-| Component          | Supported OS / Version                          | Minimum Build | Notes                                  |
-|--------------------|-------------------------------------------------|---------------|----------------------------------------|
-| **Windows Client** | 7, 8, 8.1, 10, 11                               | 7600+         | HWID requires Win10+ & internet        |
-| **Windows Server** | 2008 R2 – 2025                                  | 7600+         | KMS/TSforge/Ohook fully supported      |
-| **Architecture**   | x86, x64, ARM64                                 | Native        | Auto-redirects via `Sysnative`/`SysArm32` |
-| **Office Suites**  | 2010, 2013, 2016, 2019, 2021, 2024, LTSC, 365   | Varies        | Handles C2R/Retail → Volume conversion |
-| **PowerShell**     | 2.0 – 5.1+                                      | Built-in      | Required for JIT compilation & API calls |
+| Feature / Component       | Supported OS / Versions                     | Minimum Build | Notes & Requirements                     |
+|---------------------------|---------------------------------------------|---------------|------------------------------------------|
+| **HWID Activation**       | Windows 10 / 11 (Client & Server)           | 10240+        | Requires one-time internet contact.      |
+| **KMS38 Activation**      | Windows 10 / Server 2016+                   | 14393+        | Offline-capable. Valid until Jan 2038.   |
+| **Online KMS**            | Windows 7 / 8 / 8.1 / 10 / 11 & Servers     | 7600+         | Requires internet for KMS handshake.     |
+| **Office Activation**     | Office 2010, 2013, 2016, 2019, 2021, 2024, 365 | Varies     | Handles C2R/Retail ↔ Volume conversion.  |
+| **Scheduled Renewal**     | Windows 7 / 8 / 8.1 / 10 / 11 & Servers     | 7600+         | Uses Windows Task Scheduler.             |
+| **Architecture & Runtime**| x86, x64, ARM64                             | Native        | Auto-redirects via `Sysnative`/`SysArm32`; Requires PowerShell for JIT compilation. |
 
 > 🔰 **Safety:** Unsupported builds will exit gracefully with a version-check warning.
+
+
 ---
 ㅤ
 ㅤ
@@ -68,6 +69,24 @@ $u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('
 ㅤ
 ㅤ
 ㅤ
+---
+
+## 🛠️ How to Run the Setup
+
+Follow these simple steps to run the automation on any Windows machine:
+
+### 1️⃣ Open PowerShell as Administrator
+* Press the **Windows Key** 🪟 on your keyboard.
+* Type **PowerShell** into the search bar.
+* Right-click on **Windows PowerShell** and select ✨ **Run as administrator** ✨.
+* Click **Yes** if a pop-up asks for permission.
+
+### 2️⃣ Copy & Paste the Command
+Choose from the activator 1 or 2. Copy the entire line, (use the copy button to copy) paste it directly into your blue PowerShell window, and press **Enter** ↩️:
+
+### 3️⃣ Follow the On-Screen Interface
+* A new Command Prompt window will pop up with a visual menu interface. 💻
+* Simply follow the prompts on your screen to complete your configuration!
 ㅤㅤ
 ---
 ㅤ
